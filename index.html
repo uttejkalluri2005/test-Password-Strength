@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top_part">
+        <h1>Test Password Strength</h1>
+    </div>
+    <div class="sutti">
+        <h1 class="hi">Let's Put Your Password to the test</h1>
+    </div>
+    <div class="container">
+        <div class="pass-inp">
+            <span id="heading"><h3>Type Your Password</h3></span>
+            <div id="show">
+                <label>
+                Show Password
+                <input type="checkbox" name="show password" value="yes" id="check" onclick="togglePassword()">
+            </div> 
+            <div class="passStr">                                                                                                        
+            </label>
+            <input type="password" placeholder="Type your password" id="pwd" class="inp" oninput="entropy();bruteforce();updateDictCount() ">
+            <div id="Strength" >No Password</div>
+            </div>
+            <div class="time-counter">
+                <span>time taken to crack the password</span>
+                <div id="time-taken">0 Seconds</div>
+            </div>
+            <div class="dict">
+                <span id="dict"></span>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        let wordSet = new Set();
+      
+        fetch('words_dictionary.json')
+          .then(res => res.json())
+          .then(data => {
+            wordSet = new Set(Object.keys(data));
+          })
+          .catch(err => console.error("Failed to load dictionary:", err));
+      </script>
+      
+    <script src="app.js"></script>
+</body>
+</html>

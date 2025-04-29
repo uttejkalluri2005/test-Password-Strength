@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.top_part{
+    text-align: center;
+    background-color: blue;
+    color: aliceblue;
+    height: 60px;
+    width:100%;
+    top:0;
+    left: 0;
+    line-height: 50px;
+}
+
+.sutti{
+    background-color: aqua;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height:100px;
+    width: 100%;
+    line-height: 100px;
+}
+
+.container{
+    height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pass-inp{
+    height: 300px;
+    width: 450px;
+    max-width: 100%;
+    outline: none;
+    background-color: white;
+    border-color: black;
+    position: relative;
+
+}
+
+.show{
+    text-align: left;
+}
+.inp, #Strength {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(242, 220, 220);
+    background-color: rgb(242, 220, 220);
+    padding: 8px;
+    font-size: 16px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 10px;
+    outline:none
+}
+
+#show{
+    margin-top :20px;
+    text-align: right;
+}
+
+#Strength{
+    background-color: rgb(242, 220, 220);
+    width: 100%;
+    height: 30px;
+    margin-left: -1px;
+    padding: 8px;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 1px;
+}
+
+.time-counter{
+    margin-top: 20px;
+    text-align: center;
+}
+
+#time-taken{
+    font-size: 30px;
+}
